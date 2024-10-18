@@ -3,10 +3,20 @@ main{
 }
 body{
     text-align: center;
+    font-family: Garamond;
 }
 header{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #795548;
     color: white;
     padding: 7px;
+    font-size: 170%;
+}
+.container{
+    display: flex;
+}
+.col-8{
+    width: 72%;
+}
+.obraz{
+    height: 400px;
 }
