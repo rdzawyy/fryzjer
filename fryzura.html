@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css" />
+</head>
+
+<body>
+    <div class="box">
+        <h2>PROMOCJA!</h2>
+        <input id="skotkie" type="radio" name="dlugosc" value="Krótkie" />
+        <label for="krotkie">Krótkie</label>
+        <input id="srednie" type="radio" name="dlugosc" value="Średnie" />
+        <label for="srednie">Średnie</label>
+        <input id="poldlugie" type="radio" name="dlugosc" value="Półdługie" />
+        <label for="poldlugie">Półdługie</label>
+        <input id="dlugie" type="radio" name="dlugosc" value="Długie" />
+        <label for="dlugie">Długie</label>
+    </div>
+    </div>
+    <button onclick="obliczPromocje()">Odkryj promocje</button>
+    <p>Cena promocyjna <span id="cena-promocyjna">0</span></p>
+</body>
+
+<script>
+    function obliczPromocje() {
+        let krotkie = document.getElementById("krotkie")
+        let srednie = document.getElementById("srednie")
+        let poldlugie = document.getElementById("poldlugie")
+        let dlugie = document.getElementById("dlguie")
+        
+        if (krotkie.checked) {
+            document.getElementById("cena-promocyjna").innerHTML = krotkie.value - 10;
+            console.log("hura jest krotkie", krotkie.value - 10)
+
+        } else if (srednie.checked) {
+            document.getElementById("cena-promocyjna").innerHTML = srednie.value - 10;
+            console.log("hura jest srednie", srednie.value - 10)
+
+        } else if (poldlugie.checked) {
+            document.getElementById("cena-promocyjna").innerHTML = poldlugie.value - 10;
+            console.log("hura jest poldlugie", poldlugie.value - 10)
+
+        } else if (dlugie.checked) {
+            document.getElementById("cena-promocyjna").innerHTML = dlugie.value - 10;
+            console.log("hura jest dlugie", dlugie.value - 10)
+        }
+
+    }
+</script>
